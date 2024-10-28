@@ -15,7 +15,7 @@ function updateBalance() {
     });
 
     // Calculate the total balance
-    const total = relevantTransactions.reduce((acc, transaction) => {
+    const total = transactions.reduce((acc, transaction) => {
         return acc + (transaction.type === "income" ? transaction.amount : -transaction.amount);
     }, 0);
     
@@ -73,6 +73,9 @@ function renderTransactions(filter = "all") {
     document.getElementById("nextPage").disabled = currentPage === totalPages;
 }
 
+document.getElementById("prevPage").addEventListener("click", () => changePage("prev"));
+document.getElementById("nextPage").addEventListener("click", () => changePage("next"));
+
 // Function to handle page navigation
 function changePage(direction) {
     const filteredTransactions = transactions.filter(transaction => {
@@ -93,8 +96,7 @@ function changePage(direction) {
 }
 
 // Event listeners for pagination buttons
-document.getElementById("prevPage").addEventListener("click", () => changePage("prev"));
-document.getElementById("nextPage").addEventListener(" click", () => changePage("next"));
+
 // Function to add a transaction
 // Function to add a transaction
 function addTransaction() {
