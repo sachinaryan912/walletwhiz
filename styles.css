@@ -1,0 +1,206 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #000;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    height: 75px;
+    align-items: center;
+}
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: auto; /* Pushes other items to the right */
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background: transparent;
+    border-radius: 8px;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.balance-section span{
+    font-size: 1.7em;
+    color: #c4c4c4;
+}
+
+.balance-section h2 {
+    font-size: 2.5em;
+    color: #218838;
+    margin: 0;
+}
+
+button {
+    padding: 10px;
+    background-color: #3a3a3a9c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+.filter-section {
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+
+
+
+.filter-section select {
+    height: 40px;
+    padding: 0 20px;
+    border-radius: 30px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.list-section {
+    margin: 20px 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    
+}
+li .left{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.income {
+    color: green;
+}
+
+.expense {
+    color: red;
+}
+
+.upcoming {
+    color: orange;
+}
+
+.delete-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.delete-btn i {
+    color: red;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    border-radius: 0px;
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.modal-content div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: flex-start;
+}
+
+.modal-content div input , select{
+    height: 50px;
+    padding: 0 15px;
+    border: none;
+    background-color: rgb(235, 235, 235);
+    border-radius: 0px;
+    
+}
+
+.modal-content div button{
+    height: 50px;
+    padding: 0 15px;
+    border-radius: 0%;
+    background-color: #000;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#paginationControls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#paginationControls button {
+    margin: 0 10px;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#paginationControls button:disabled {
+    background-color: #ccc;
+}
+
